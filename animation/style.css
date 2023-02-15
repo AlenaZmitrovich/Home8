@@ -1,0 +1,66 @@
+.block{
+    padding: 5rem;
+    background-color: blue;
+}
+
+.block__element{
+    position: relative;
+    background-color: rgb(80, 80, 80);
+    width: 100px;
+    height: 50px;
+    left: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-top: solid 3px rgb(255, 217, 1);
+    border-radius: 3px;
+
+    animation-name: element-animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:normal;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+
+}
+.block__element:hover {
+    animation-play-state: paused;
+  }
+
+.save{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes element-animation {
+    0%{
+        transform: rotate(0);
+    }
+
+    10%{
+        transform: rotate(-10deg);
+    }
+
+    20%{
+        transform: rotate(10deg);
+    }
+
+    30%{
+        transform: rotate(-10deg);
+    }
+
+    40%{
+        transform: rotate(10deg);
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
